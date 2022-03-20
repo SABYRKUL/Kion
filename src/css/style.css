@@ -1,0 +1,476 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: ghostwhite;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+}
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 8px;
+    border: 3px solid #d4d4d4;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: orange;
+    transition: .6s;
+}
+body{
+    font-family: Arial;
+}
+.header {
+    padding-top: 20px;
+
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-6{
+    width: 50%;
+    padding: 40px 15px;
+}
+.header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+.h1{
+    line-height: 50px;
+}
+
+
+
+.header-title {
+    Font-size: 30px;
+    Line-height: 28px;
+    color:#173A56;
+    margin-right: 200px;
+    margin-left: 10px;
+}
+
+.header-link {
+    color: #22343D;
+    margin-right: 49px;
+    text-decoration: none;
+    transition: .6s;
+}
+.header-link:hover{
+    transition: .6s;
+    color: orange;
+}
+
+.header-button-1 {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    line-height: 24px;
+    border-radius: 50%;
+    background: white;
+    padding: 15px 25px;
+    border: 1px solid gray;
+
+
+}
+.header-img-2{
+    margin-right: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header-button-2{
+    height: 70px;
+    font-size: 17px;
+    line-height: 24px;
+    border-radius: 56px;
+    padding: 11px 28px;
+    margin-left: 24px;
+    border: 1px solid white;
+    background-color: #283337;
+    color: white;
+    transition: .6s;
+    margin-bottom: 10px;
+}
+.header-button-2:hover{
+    transition: .6s;
+    background-color: orange;
+    cursor: pointer;
+}
+.popup_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+.popup_bg.active{
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+.popup.active{
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+.popup-p{
+    margin-left: 130px;
+}
+.close-popup{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.popup Label{
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.popup .Label_text{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #cfd0d3;
+    margin-bottom: 5px;
+}
+.popup input{
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+}
+.popup input:focus{
+    border-bottom: 1px solid #2982ff;
+}
+.popup input:focus + .Label_text{
+    color: #2982ff;
+}
+.popup textarea{
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+    font-size: 18px;
+    padding-top: 5px;
+}
+.popup textarea:focus{
+    border-bottom: 1px solid #2982ff;
+}
+.popup textarea:focus + .Label_text{
+    color: #2982ff;
+}
+.popup button{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    transition: .6s;
+}
+.popup button:hover{
+    transition: .6s;
+    background-color: #0d95e8;
+    cursor: pointer;
+    color: white;
+}
+
+.main-section{
+    background-color: #F3F7F4;
+
+    padding-top: 20px;
+}
+.main-button{
+    border-radius: 100px;
+    background-color: black;
+    width: 129px;
+    height: 36px;
+    color: white;
+    transition: .6s;
+    border: none;
+}
+.main-button:hover{
+    background-color: orange;
+    transition: .6s;
+    cursor: pointer;
+}
+.item-1{
+    height: 80px;
+    left: 0;
+    right: 34.38%;
+    top: -6px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+}
+.hero-h{
+    height: 62px;
+    left: 0;
+    right: 8.68%;
+    top: 38px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 31px;
+}
+.hero-img{
+    display: flex;
+    justify-content: center;
+}
+.img{
+    padding: 50px;
+}
+.button{
+    background: black;
+    border-radius: 100px;
+    height: 50px;
+    width: 170px;
+    color: white;
+    border: none;
+    transition: .6s;
+}
+.button:hover{
+    transition: .6s;
+    background-color: orange;
+    cursor: pointer;
+}
+.item-5{
+    width: 560px;
+    height: 548px;
+    position: relative;
+    background-color: #F3F7F4;
+}
+.section{
+    margin-top: 40px;
+}
+.img-3{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.h2{
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 50px;
+}
+.p{
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 300px;
+    font-size: 18px;
+}
+.h5{
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 310px;
+    font-size: 18px;
+}
+.hero{
+    margin-top: 100px;
+    background-color: #F3F7F4;
+}
+.owl-carousel{
+    display: flex;
+    justify-content: center;
+}
+.hero-content{
+    text-align: center;
+}
+.hero-text{
+    font-size: 20px;
+    line-height: 30px;
+}
+.hero-title{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Times New Roman";
+    margin-top: 100px;
+}
+.col-4{
+    padding: 100px;
+}
+.hero-2{
+    margin-top: 70px;
+}
+.main-h1{
+    font-size: 50px;
+}
+.p-2{
+    margin-top: 35px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 20px;
+}
+.main-h5-text{
+    margin-top: 25px;
+}
+.main-h5{
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.item-8{
+    display: flex;
+    width: 500px;
+    height: 290px;
+    background-color: gainsboro;
+    margin-top: 80px;
+    position: relative;
+}
+.btn{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #61D7AC;
+    position: absolute;
+    margin-top: 105px;
+    margin-left: 200px;
+    border: none;
+    opacity: 0.8;
+}
+.img-2{
+    width: 110px;
+    height: 110px;
+    margin-top: 90px;
+    margin-left: 70px;
+}
+.section-p{
+    font-size: 100px;
+    margin-top: 90px;
+    margin-left: 30px;
+
+}
+.hero-3{
+    margin-top: 50px;
+}
+.hero-4{
+    margin-top: 50px;
+}
+.hero-text-2{
+    margin-top: 30px;
+}
+.hero-button{
+    width: 160px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    border-radius: 100px;
+    border: none;
+    margin-top: 35px;
+    transition: .6s;
+}
+.hero-button:hover{
+    transition: .6s;
+    background-color: orange;
+    cursor: pointer;
+}
+.footer{
+    margin-top: 50px;
+    background-color: black;
+    position: relative;
+}
+.footer-h5-1{
+    margin-top: 90px;
+    color: gray;
+
+}
+.footer-h5{
+    color: white;
+    margin-top: 15px;
+}
+.footer-h5-2{
+    color: white;
+    margin-top: 35px;
+}
+.footer-button{
+    background-color: #283337;
+    color: white;
+    border-radius: 100px;
+    width: 160px;
+    height: 40px;
+    margin-top: 40px;
+    border: none;
+    transition: .6s;
+}
+.footer-button:hover{
+    transition: .6s;
+    background-color: orange;
+    cursor: pointer;
+}
+.footer-item{
+    margin-left: 280px;
+}
+.footer-item-2{
+    margin-left: 120px;
+}
+.footer-img{
+    margin-left: 90px;
+    margin-bottom: 160px;
+    margin-top: 80px;
+    width: 50px;
+    height: 50px;
+}
+.contact-input-email{
+    width: 400px;
+    height: 60px;
+    border-radius: 6px;
+    margin-left: 450px;
+    padding-left: 30px;
+    margin-top: 230px;
+    border: none;
+    outline: none;
+}
+.block{
+    position: absolute;
+    margin-top: 50px;
+}
+#footer-button-2{
+    background-color: #283337;
+    color: white;
+    border-radius: 100px;
+    width: 120px;
+    height: 50px;
+    margin-top: 40px;
+    border: none;
+    transition: .6s;
+}
+#footer-button-2:hover{
+    transition: .6s;
+    background-color: orange;
+    cursor: pointer;
+}
+
+
+
+
+
